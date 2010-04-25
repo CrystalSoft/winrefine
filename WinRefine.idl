@@ -1,0 +1,38 @@
+// WinRefine.idl : IDL source for WinRefine.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (WinRefine.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(B865A80D-C21A-4D54-9420-0DB121AB67EA),
+		dual,
+		helpstring("IWinRefineShlExt Interface"),
+		pointer_default(unique)
+	]
+	interface IWinRefineShlExt : IDispatch
+	{
+	};
+
+[
+	uuid(48CAE7CA-E968-4EF9-A7F2-41EC3D325A1D),
+	version(1.0),
+	helpstring("WinRefine 1.0 Type Library")
+]
+library WINREFINELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(3BE3D911-D0F6-4DBC-A9DB-E4ECA21C53A7),
+		helpstring("WinRefineShlExt Class")
+	]
+	coclass WinRefineShlExt
+	{
+		[default] interface IWinRefineShlExt;
+	};
+};

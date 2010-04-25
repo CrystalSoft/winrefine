@@ -1,0 +1,44 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {3BE3D911-D0F6-4DBC-A9DB-E4ECA21C53A7} = s 'WinRefineShlExt Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+
+	NoRemove *
+	{
+		NoRemove ShellEx
+		{
+			{00021500-0000-0000-C000-000000000046} = s '{3BE3D911-D0F6-4DBC-A9DB-E4ECA21C53A7}'
+		}
+	}
+}
+
+HKLM
+{
+	NoRemove Software
+	{
+		NoRemove Microsoft
+		{
+			NoRemove Windows
+			{
+				NoRemove CurrentVersion
+				{
+					NoRemove 'Shell Extensions'
+					{
+						NoRemove Approved
+						{
+							val {3BE3D911-D0F6-4DBC-A9DB-E4ECA21C53A7} = s 'WinRefine Shell Extension'
+						}
+					}
+				}
+			}
+		}
+	}
+}
