@@ -1,0 +1,47 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: WinRefine - Win32 Release MinDependency--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Dario\IMPOST~1\Temp\RSPA1D.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /FR"ReleaseMinDependency/" /Fp"ReleaseMinDependency/WinRefine.pch" /Yu"stdafx.h" /Fo"ReleaseMinDependency/" /Fd"ReleaseMinDependency/" /FD /c 
+"C:\project\Sourcecode\MyProg\Visual C++\Pubblici\WinRefine\WinRefineShlExt.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Dario\IMPOST~1\Temp\RSPA1D.tmp" 
+Creating temporary file "C:\DOCUME~1\Dario\IMPOST~1\Temp\RSPA1E.tmp" with contents
+[
+shlwapi.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinDependency/WinRefine.pdb" /machine:I386 /def:".\WinRefine.def" /out:"ReleaseMinDependency/WinRefine.dll" /implib:"ReleaseMinDependency/WinRefine.lib" 
+".\ReleaseMinDependency\StdAfx.obj"
+".\ReleaseMinDependency\WinRefine.obj"
+".\ReleaseMinDependency\WinRefineShlExt.obj"
+".\ReleaseMinDependency\WinRefine.res"
+".\ReleaseMinDependency\Util.obj"
+".\ReleaseMinDependency\Player.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Dario\IMPOST~1\Temp\RSPA1E.tmp"
+Creating temporary file "C:\DOCUME~1\Dario\IMPOST~1\Temp\RSPA1F.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinDependency\WinRefine.dll"
+echo regsvr32 exec. time > ".\ReleaseMinDependency\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\Dario\IMPOST~1\Temp\RSPA1F.bat"
+Compiling...
+WinRefineShlExt.cpp
+C:\project\Sourcecode\MyProg\Visual C++\Pubblici\WinRefine\WinRefineShlExt.cpp(99) : error C2065: 'SHCreateThread' : undeclared identifier
+Error executing cl.exe.
+<h3>Output Window</h3>
+Creating command line "bscmake.exe /nologo /o"ReleaseMinDependency/WinRefine.bsc"  ".\ReleaseMinDependency\StdAfx.sbr" ".\ReleaseMinDependency\WinRefine.sbr" ".\ReleaseMinDependency\WinRefineShlExt.sbr" ".\ReleaseMinDependency\Util.sbr" ".\ReleaseMinDependency\Player.sbr""
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+WinRefine.dll - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
